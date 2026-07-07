@@ -32,9 +32,9 @@ hubConnection.On<string>("ReceivePong", (message)
 await hubConnection.StartAsync();
 Console.WriteLine("\nClient connected!\n");
 
-Console.WriteLine("-------------------------------------------------------------");
+Console.WriteLine("------------------------------------------------------------------------------");
 Console.WriteLine("\nWelcome to\n \nMXP-Sugar RealTime communication console app\n");
-Console.WriteLine("-------------------------------------------------------------");
+Console.WriteLine("------------------------------------------------------------------------------");
 
 Console.WriteLine("\n> Press 'P' on the keyboard to Ping the server. Press any other key to exit");
 
