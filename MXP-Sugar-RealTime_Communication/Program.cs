@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.SignalR.Client;
 
-Console.WriteLine("Hello, World!");
-
 var builder = WebApplication.CreateBuilder();
 builder.Services.AddSignalR();
 
@@ -13,9 +11,13 @@ var app = builder.Build();
 app.MapHub<PingPongHub>("/pingpong");
 app.MapGet("/", () => "Hello from a transformed console app!");
 
-_ = app.RunAsync();
-Console.WriteLine("Server started...");
+Console.WriteLine("\nStarting up server...\n");
 
+_ = app.RunAsync();
+Console.WriteLine("\nServer started!\n");
+
+Console.WriteLine("\nConnecting Client...\n");
+    
 // Hub connection
 
 var hubConnection = new HubConnectionBuilder()
@@ -28,8 +30,13 @@ hubConnection.On<string>("ReceivePong", (message)
     });
 
 await hubConnection.StartAsync();
-Console.WriteLine("Client connected");
-Console.WriteLine("Press 'P' on the keyboard to Ping the server. Press any other key to exit");
+Console.WriteLine("\nClient connected!\n");
+
+Console.WriteLine("-------------------------------------------------------------");
+Console.WriteLine("\nWelcome to\n \nMXP-Sugar RealTime communication console app\n");
+Console.WriteLine("-------------------------------------------------------------");
+
+Console.WriteLine("\n> Press 'P' on the keyboard to Ping the server. Press any other key to exit");
 
 while (true)
 {
