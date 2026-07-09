@@ -8,7 +8,7 @@
 Welcome reader! This is the first Caramelofy project and experiment. 🚀
 
 ### Purpose
-To experiment with real-time communication protocol in .NET with SignalR through a Console app. The goal is to test the simplest case of "ping" and "pong" between two parts Client and Server, to learn patterns and resources needed to use and set up SignalR.
+To experiment with real-time communication protocol in .NET with SignalR through a Console app. The goal is to test the simplest case of "ping" and "pong" between two parties, Client and Server, to learn patterns and resources needed to use and set up SignalR.
 
 ⚙️ **Tech stack:** C# and .NET 10
 
